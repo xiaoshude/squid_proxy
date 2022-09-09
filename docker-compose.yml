@@ -3,8 +3,8 @@ services:
   proxy:
     image: datadog/squid
     ports:
-      - "8080:3128"
+      - "8088:3128"
     volumes:
       - ./squid.conf:/etc/squid/squid.conf
-      - ./passwords:/etc/squid/passwords
+      # - ./passwords:/etc/squid/passwords
     restart: always
